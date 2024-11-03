@@ -1,0 +1,20 @@
+id: data_voyage_seismic_insight
+title: Data Voyage Seismic Insight with Dataflow
+description: Join SeisAnalytics to build a cutting-edge data pipeline,
+  transporting seismic data from GCS to BigQuery using Dataflow. Develop skills
+  in real-time processing and data transformation for predictive analytics.
+skills:
+  - backend
+  - database
+  - performance
+  - monitoring
+steps:
+  - prepare_analytical_environment
+  - craft_seismic_dataflow_pipeline
+  - deploy_seismic_dataflow_job
+  - integrate_data_into_bigquery
+  - monitor_optimize_pipeline_performance
+level: advanced
+type: PROMPT
+duration: 2
+repository: https://github.com/trywilco/gcp-playground

@@ -1,0 +1,34 @@
+id: monitor_optimize_pipeline_performance
+learningObjectives:
+  - Optimize Dataflow pipeline for performance and future scalability.
+hints:
+  - Investigate Dataflow's built-in optimization tools.
+  - Review past logs to identify bottlenecks.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: The crowning touch involves fine-tuning.
+          - text: Analyze pipeline performance to unveil potential optimization areas,
+              focusing on resource allocation and throughput.
+          - text: Ensure your operational plan accommodates future data tsunamis by tweaking
+              settings for cost and speed.
+          - text: Record your findings in our research log for continual improvement.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Congratulations, you've successfully completed the data voyage! With the
+                seismic pipeline in place, SeisAnalytics is now on the forefront
+                of earthquake prediction. Your efforts turn data waves into
+                actionable insights. Thanks for all your hard work!
+      - actionId: finish_step

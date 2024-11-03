@@ -1,0 +1,25 @@
+id: integrate_data_into_bigquery
+learningObjectives:
+  - Integrate and validate transformed data within BigQuery.
+hints:
+  - Use BigQuery's query capabilities to test data integrity.
+  - Check for any schema mismatches during data load.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: As data cascades in, ensure BigQuery is primed for incoming structured
+              insights.
+          - text: Load processed datasets into the 'SeismicAnalysis' tables.
+          - text: Execute a few sample queries to explore seismic trends and validate our
+              prediction capabilities with real data.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

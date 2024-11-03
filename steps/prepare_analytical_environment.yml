@@ -1,0 +1,26 @@
+id: prepare_analytical_environment
+learningObjectives:
+  - Set up the analytical environment with GCP APIs and BigQuery dataset.
+hints:
+  - Ensure you have the necessary permissions in GCP to enable APIs.
+  - Navigate to the BigQuery page in the GCP console to create a dataset.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to SeisAnalytics, fellow data voyager! Our first assignment is
+              ensuring all components are operational. Verify your GCP project
+              has BigQuery and Dataflow APIs enabled.
+          - text: Create a dataset named 'SeismicAnalysis' in BigQuery to store insights.
+          - text: Ping me in our secure channel if any tremors are detected—or if you've
+              completed the setup!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

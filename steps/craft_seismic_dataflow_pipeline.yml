@@ -1,0 +1,25 @@
+id: craft_seismic_dataflow_pipeline
+learningObjectives:
+  - Create a Dataflow template using Apache Beam for seismic data.
+hints:
+  - Review the Apache Beam documentation for pipeline creation.
+  - Check the schema requirements for accurate transformation logic.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Design a Dataflow template to process tremor data stored in GCS.
+          - text: Using Apache Beam, draft a pipeline transforming sensor readings into
+              structured insights compatible with BigQuery.
+          - text: Ensure the transformation logic mirrors our schema needs.
+          - text: Submit your pipeline architecture sketch for team validation.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

@@ -1,0 +1,28 @@
+id: deploy_seismic_dataflow_job
+learningObjectives:
+  - Deploy and manage the Dataflow job for real-time data adoption.
+hints:
+  - Use the GCP Console for a guided deployment experience if you're new to the
+    CLI.
+  - Refer to GCP's monitoring documentation to familiarize yourself with
+    tracking tools.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Time to unleash the data torrent! Deploy your data pipeline either through
+              the GCP Console or CLI.
+          - text: Translate raw readings into our seismic insight engine.
+          - text: Use monitoring tools to track data transformation velocity.
+          - text: Update the team through our server with job deployment status and initial
+              logs.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
