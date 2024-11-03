@@ -17,5 +17,8 @@ steps:
   - monitor_optimize_pipeline_performance
 level: advance
 type: PROMPT
+frameworks:
+  backend:
+    - python
 duration: 2
 repository: https://github.com/trywilco/gcp-playground
