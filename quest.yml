@@ -14,7 +14,7 @@ steps:
   - deploy_seismic_dataflow_job
   - integrate_data_into_bigquery
   - monitor_optimize_pipeline_performance
-level: advanced
+level: advance
 type: PROMPT
 duration: 2
 repository: https://github.com/trywilco/gcp-playground
