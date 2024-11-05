@@ -1,25 +1,45 @@
 id: integrate_data_into_bigquery
 learningObjectives:
-  - Integrate and validate transformed data within BigQuery.
+  - Write aggregated data to BigQuery.
 hints:
-  - Use BigQuery's query capabilities to test data integrity.
-  - Check for any schema mismatches during data load.
+  - Ensure the [new table schema](https://cloud.google.com/bigquery/docs/schemas) matches the aggregated data structure.
+  - Validate data integrity after loading into BigQuery.
+  - For more information on creating custom `beam.ParDo`, visit: https://beam.apache.org/documentation/programming-guide/#pardo
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: lucca
         messages:
-          - text: As data cascades in, ensure BigQuery is primed for incoming structured
-              insights.
-          - text: Load processed datasets into the 'SeismicAnalysis' tables.
-          - text: Execute a few sample queries to explore seismic trends and validate our
-              prediction capabilities with real data.
-    - actionId: ready_message
-      params:
-        person: lucca
+          - text: Now comes the crucial part of our data pipeline! We will process and aggregate earthquake data per region.
+          - text: This step involves creating your own `beam.ParDo` and `SumCounts` to aggregate the data.
+          - text: Aggregated data helps us understand which regions are most affected by earthquakes, enabling better preparedness and resource allocation.
+          - text: Once the data is aggregated, write it into a new BigQuery table called 'events_count'.
+          - text: Finally, load the data into BigQuery and execute queries to identify the top regions with the most earthquake events.
+          - text: Let's dive in and see which region has the most earthquake events!
+          - text: Once you're done, please answer with the region that has the most earthquake events.
 trigger:
-  type: user_ready_response
+  type: user_message
   flowNode:
-    do:
-      - actionId: finish_step
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: "${userMessageText}"
+            regex: /california/i
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: Bingo! California has the most earthquake events. Looks like I'll need to prepare for a lot of shaking in the future!
+                - text: Congratulations on completing this step! You've done an excellent job processing and aggregating the earthquake data. Your efforts will help in better understanding and preparing for earthquake events. Keep up the great work!
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: "Hmm, that's not quite right. Give it another shot!"

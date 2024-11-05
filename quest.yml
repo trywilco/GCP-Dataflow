@@ -10,11 +10,14 @@ skills:
   - performance
   - monitoring
 steps:
+  - setup_gcloud
+  - configure_gsutil_cli
+  - create_wilco_iam_user
   - prepare_analytical_environment
+  - prepare_database
   - craft_seismic_dataflow_pipeline
   - deploy_seismic_dataflow_job
   - integrate_data_into_bigquery
-  - monitor_optimize_pipeline_performance
 level: advance
 type: PROMPT
 frameworks:
