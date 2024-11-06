@@ -14,7 +14,9 @@ startFlow:
           - text: In this task, you will create a Dataflow pipeline to process seismic data stored in Google Cloud Storage (GCS) and write the processed data to BigQuery.
           - text: "[Google Cloud Dataflow](https://cloud.google.com/products/dataflow) is a fully managed service for executing Apache Beam pipelines within the Google Cloud Platform ecosystem."
           - text: "It allows for the processing of large datasets in a distributed manner."
-          - text: "Here is a Python script to help you get started:"
+          - text: "You can read more here if you'd like about [Google Cloud Dataflow Documentation](https://cloud.google.com/dataflow/docs)"
+          - text: "There is also a quick video [Here](https://www.youtube.com/watch?v=HhA5C1ml8b0)"
+          - text: "Moving forward, here is a Python script to help you get started:"
           - text: |
               ```
               import apache_beam as beam
