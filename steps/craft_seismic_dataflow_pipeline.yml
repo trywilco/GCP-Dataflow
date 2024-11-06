@@ -2,7 +2,7 @@ id: craft_seismic_dataflow_pipeline
 learningObjectives:
   - Create a Dataflow pipeline using Apache Beam for seismic data.
 hints:
-  - Review the Apache Beam documentation for pipeline creation: https://beam.apache.org/documentation/
+  - "Review the Apache Beam documentation for pipeline creation: https://beam.apache.org/documentation/"
   - Check the schema requirements for accurate transformation logic.
   - Ensure you have the correct GCS path and BigQuery table details.
 startFlow:
@@ -15,7 +15,7 @@ startFlow:
           - text: "[Google Cloud Dataflow](https://cloud.google.com/products/dataflow) is a fully managed service for executing Apache Beam pipelines within the Google Cloud Platform ecosystem."
           - text: "It allows for the processing of large datasets in a distributed manner."
           - text: "Here is a Python script to help you get started:"
-          - code: |
+          - text: |
               import apache_beam as beam
               from apache_beam.options.pipeline_options import PipelineOptions
               from apache_beam.io import ReadFromText
