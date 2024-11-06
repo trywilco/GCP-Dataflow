@@ -28,7 +28,7 @@ trigger:
       - actionId: gcp_api_request
         name: gcp_db_data
         params:
-          path: "bigquery/v2/projects/Wilco/datasets/SeismicAnalysis/tables/data"
+          path: "bigquery/v2/projects/${user.integrations.gcp.project_id}/datasets/SeismicAnalysis/tables/data"
     if:
       conditions:
         - conditionId: is_truthy

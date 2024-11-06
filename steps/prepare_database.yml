@@ -27,14 +27,14 @@ trigger:
       - actionId: gcp_api_request
         name: gcp_db_exists
         params:
-          path: "bigquery/v2/projects/Wilco/datasets/SeismicAnalysis"
+          path: "bigquery/v2/projects/${user.integrations.gcp.project_id}/datasets/SeismicAnalysis"
     if:
       conditions:
         - conditionId: text_contains_strings
           params:
-            text: SeismicAnalysis
+            text: ${outputs.gcp_db_exists?.data?.id}
             strings:
-              - ${outputs.gcp_db_exists?.data?.id}
+              - SeismicAnalysis
       then:
         do:
           - actionId: bot_message

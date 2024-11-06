@@ -30,6 +30,12 @@ trigger:
               key: credentials
               value: "${eventMetadata.credentials}"
 
+          - actionId: user_set_integration_property
+            params:
+              integration: gcp
+              key: project_id
+              value: "${eventMetadata.project_id}"
+
           - actionId: bot_message
             params:
               person: lucca
