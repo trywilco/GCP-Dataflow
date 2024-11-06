@@ -35,8 +35,8 @@ trigger:
             params:
               person: lucca
               messages:
-                - text: "![](https://i.giphy.com/mzoDPO2LCs7fwkri4T.gif)"
-                - text: Bingo! California has the most earthquake events. Looks like I'll need to prepare for a lot of shaking in the future!
+                - text: "![](https://i.giphy.com/L3EeenkqvFVZjweINc.gif)"
+                - text: Bingo! Los Angeles has the most earthquake events. Looks like I'll need to prepare for a lot of shaking in the future!
                 - text: Congratulations on completing this step! You've done an excellent job processing and aggregating the earthquake data. Your efforts will help in better understanding and preparing for earthquake events. Keep up the great work!
           - actionId: finish_step
       else:
