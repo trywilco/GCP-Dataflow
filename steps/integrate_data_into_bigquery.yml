@@ -14,10 +14,10 @@ startFlow:
           - text: Now comes the crucial part of our data pipeline! We will process and aggregate earthquake data per region.
           - text: This step involves creating your own `beam.ParDo` and `SumCounts` to aggregate the data.
           - text: Aggregated data helps us understand which regions are most affected by earthquakes, enabling better preparedness and resource allocation.
-          - text: Once the data is aggregated, write it into a new BigQuery table called 'events_count'.
-          - text: Finally, load the data into BigQuery and execute queries to identify the top regions with the most earthquake events.
+          - text: Once the data is aggregated, write it into a new BigQuery table called `events_count`.
+          - text: Finally, load the data into BigQuery.
           - text: Let's dive in and see which region has the most earthquake events!
-          - text: :instruction[Using BigQuery, write a query to identify the top regions with earthquake events]
+          - text: :instruction[Using DataFlow functions, aggregate the earthquake data per region and write the results to BigQuery]
           - text: Once you're done, please tell me the region name that has the most earthquake events.
 trigger:
   type: user_message
@@ -27,7 +27,8 @@ trigger:
         - conditionId: text_match_regex
           params:
             text: "${userMessageText}"
-            regex: /california/i
+            regex: "Los Angeles"
+            flags: "i"
       then:
         do:
           - actionId: bot_message

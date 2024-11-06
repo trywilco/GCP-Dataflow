@@ -12,7 +12,7 @@ startFlow:
         messages:
           - text: Time to unleash the data torrent! Deploy your data pipeline through the CLI.
           - text: We're deploying this Dataflow job to process real-time seismic data, transforming raw readings into actionable insights.
-          - text: "To deploy, :instruction[use the command: `python <PYTHON_SCRIPT.py> --runner DataflowRunner --project <PROJECT>`]"
+          - text: "To deploy, :instruction[use the command: `python <PYTHON_SCRIPT.py> --runner DataflowRunner --project <PROJECT> --temp_location <TMP_BUCKET_PATH> --staging_location <STAGING_BUCKET_PATH> --region <REGION>`]"
           - text: A Dataflow job is a pipeline that reads data from a source, processes it, and writes it to a sink. It's essential for real-time data processing.
           - text: Use the GCP web console to monitor the job's performance and data transformation velocity.
           - text: Update the team (me) through our server with job deployment status and initial logs.
