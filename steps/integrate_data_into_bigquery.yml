@@ -17,7 +17,8 @@ startFlow:
           - text: Once the data is aggregated, write it into a new BigQuery table called 'events_count'.
           - text: Finally, load the data into BigQuery and execute queries to identify the top regions with the most earthquake events.
           - text: Let's dive in and see which region has the most earthquake events!
-          - text: Once you're done, please answer with the region that has the most earthquake events.
+          - text: :instruction[Using BigQuery, write a query to identify the top regions with earthquake events]
+          - text: Once you're done, please tell me the region name that has the most earthquake events.
 trigger:
   type: user_message
   flowNode:
