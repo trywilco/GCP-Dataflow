@@ -4,7 +4,7 @@ learningObjectives:
 hints:
   - Ensure the [new table schema](https://cloud.google.com/bigquery/docs/schemas) matches the aggregated data structure.
   - Validate data integrity after loading into BigQuery.
-  - For more information on creating custom `beam.ParDo`, visit: https://beam.apache.org/documentation/programming-guide/#pardo
+  - "For more information on creating custom `beam.ParDo`, visit: https://beam.apache.org/documentation/programming-guide/#pardo"
 startFlow:
   do:
     - actionId: bot_message
