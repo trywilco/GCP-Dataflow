@@ -18,7 +18,7 @@ startFlow:
               By analyzing this data, we can gain insights into which areas are most prone to earthquakes and
               take necessary precautions or actions.
           - text:
-              "We have a large CSV file named (earthquake_data.csv)[${earthquake_data.csv}] containing all the seismic analysis.
+              "We have a large CSV file named [earthquake_data.csv](${earthquake_data.csv}) containing all the seismic analysis.
               This raw data is too big to process directly, so we'll use GCP Dataflow to handle it.
               The first step is to upload this file to a GCP bucket. This allows us to efficiently
               manage and process large datasets."
