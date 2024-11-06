@@ -11,6 +11,7 @@ skills:
   - monitoring
 steps:
   - setup_gcloud
+  - codespace_start
   - configure_gsutil_cli
   - create_wilco_iam_user
   - prepare_analytical_environment
