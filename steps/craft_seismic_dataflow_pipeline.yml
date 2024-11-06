@@ -16,6 +16,7 @@ startFlow:
           - text: "It allows for the processing of large datasets in a distributed manner."
           - text: "Here is a Python script to help you get started:"
           - text: |
+              ```
               import apache_beam as beam
               from apache_beam.options.pipeline_options import PipelineOptions
               from apache_beam.io import ReadFromText
@@ -52,6 +53,7 @@ startFlow:
 
               if __name__ == '__main__':
                   run()
+              ```
           - text: Fill in `gcs_input_path` and `bigquery_table` with your details, and ensure `fields` in `ProcessSeismicData` matches your CSV structure.
           - text: "Also, in each dataset there are tables. We now want to put the records in a table called `data`."
           - text: "Once you've completed the script, let me know"
