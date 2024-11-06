@@ -19,6 +19,8 @@ startFlow:
           - text: Let's dive in and see which region has the most earthquake events!
           - text: :instruction[Using BigQuery, write a query to identify the top regions with earthquake events]
           - text: Once you're done, please tell me the region name that has the most earthquake events.
+          - text: "For more information on BigQuery, [visit here](https://cloud.google.com/bigquery/docs) "
+          - text: "[Theres a quick video to explain more about BigQuery](https://www.youtube.com/watch?v=HhA5C1ml8b0)"
 trigger:
   type: user_message
   flowNode:
