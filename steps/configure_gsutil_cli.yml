@@ -11,7 +11,7 @@ startFlow:
         messages:
           - text: "Let's configure the Google CLI for our mission."
           - text: "Go to [Google Storage section](https://console.cloud.google.com/storage/browse), select your project from the project dropdown (on the top left of the page) and copy the project ID."
-          - text: ":instruction[Open your terminal in codespace and run `gcloud init --project <PROJECT_ID>`] and follow the sign up process in the browser."
+          - text: ":instruction[Open your terminal in codespace and run `gcloud init --project <PROJECT_ID>`] and follow the sign-in process in the browser."
           - text: "Let me know when you're done."
     - actionId: ready_message
       params:
