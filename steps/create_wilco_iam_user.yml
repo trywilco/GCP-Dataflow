@@ -10,7 +10,7 @@ startFlow:
         person: lucca
         messages:
           - text: "Now that we have our Google Cloud CLI ready, we need permission to verify your changes. Let's use the provided script to create an IAM user named 'Wilco'. This will help us with our checks."
-          - text: ":instruction[Open your terminal and run the following command: `./create_wilco_user.sh`]."
+          - text: ":instruction[Open your Codespace terminal and run the following command: `./create_wilco_user.sh`]."
 trigger:
   type: user_event
   params:

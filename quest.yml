@@ -25,3 +25,8 @@ frameworks:
     - python
 duration: 2
 repository: https://github.com/trywilco/gcp-playground
+sidebarTools:
+  - name: Google Cloud
+    link: ${user.properties.gcp_sidebar}
+    visible: ${!!user.properties.gcp_sidebar}
+    icon: gcpicon.png

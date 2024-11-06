@@ -10,7 +10,9 @@ startFlow:
       params:
         person: lucca
         messages:
+          - text: Now that we finished with our setup, let the fun begin!
           - text: Welcome to SeisAnalytics, fellow data voyager!
+          - text: "![](https://i.giphy.com/xT5LMuRbEiz9ZuhMME.gif)"
           - text:
               Today, we need to process seismic data to identify the most affected regions by seismic activities.
               By analyzing this data, we can gain insights into which areas are most prone to earthquakes and
@@ -21,7 +23,7 @@ startFlow:
               The first step is to upload this file to a GCP bucket. This allows us to efficiently
               manage and process large datasets.
           - text:
-              Please create a GCP bucket named '${user.repoName.toLowerCase()}' if it doesn't already exist, and upload 'earthquake_data.csv' to it.
+              :instruction[Please create a GCP bucket named '${user.repoName.toLowerCase()}'] if it doesn't already exist, and upload 'earthquake_data.csv' to it.
               Let us know here once it's done so we can proceed with the next steps.
           - text: Ping me here if any tremors are detected—or if you've completed the setup!
     - actionId: ready_message
