@@ -13,7 +13,7 @@ startFlow:
               We need a centralized location to store and analyze seismic data. BigQuery
               provides a scalable and efficient way to handle large datasets, making it
               ideal for our analytical needs.
-          - text: Create a dataset named 'SeismicAnalysis' in BigQuery to store insights.
+          - text: :instruction[Create a dataset named 'SeismicAnalysis' in BigQuery] to store insights.
           - text:
               Ping me in our secure channel if any tremors are detected—or if you've
               completed the setup!
