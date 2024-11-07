@@ -1,5 +1,5 @@
 id: data_voyage_seismic_insight
-title: Data Voyage: Seismic Insight with Dataflow
+title: "Data Voyage: Seismic Insight with Dataflow"
 subtitle: Build a data pipeline to transport seismic data from GCS to BigQuery using Dataflow
 description: Join SeisAnalytics to build a cutting-edge data pipeline,
   transporting seismic data from GCS to BigQuery using Dataflow. Develop skills
