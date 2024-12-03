@@ -34,7 +34,7 @@ trigger:
           params:
             text: ${outputs.gcp_db_exists?.data?.id}
             strings:
-              - ${user.repoName.toLowerCase()}
+              - ${user.repoName.toLowerCase().replaceAll('-','_')}
       then:
         do:
           - actionId: bot_message
