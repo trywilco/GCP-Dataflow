@@ -13,7 +13,7 @@ startFlow:
               We need a centralized location to store and analyze seismic data. BigQuery
               provides a scalable and efficient way to handle large datasets, making it
               ideal for our analytical needs.
-          - text: :instruction[Create a dataset named '${user.repoName.toLowerCase()}' in BigQuery] to store insights.
+          - text: :instruction[Create a dataset named `${user.repoName.toLowerCase().replaceAll('-','_')}` in BigQuery] to store insights.
           - text:
               Ping me in our secure channel if any tremors are detected—or if you've
               completed the setup!
@@ -27,7 +27,7 @@ trigger:
       - actionId: gcp_api_request
         name: gcp_db_exists
         params:
-          path: "bigquery/v2/projects/${user.integrations.gcp.project_id}/datasets/${user.repoName.toLowerCase()}"
+          path: "bigquery/v2/projects/${user.integrations.gcp.project_id}/datasets/${user.repoName.toLowerCase().replaceAll('-','_')}"
     if:
       conditions:
         - conditionId: text_contains_strings
@@ -41,7 +41,7 @@ trigger:
             params:
               person: lucca
               messages:
-                - text: "The dataset '${user.repoName.toLowerCase()}' has been successfully created in BigQuery."
+                - text: "The dataset `${user.repoName.toLowerCase().replaceAll('-','_')}` has been successfully created in BigQuery."
           - actionId: finish_step
       else:
         do:
@@ -49,7 +49,7 @@ trigger:
             params:
               person: lucca
               messages:
-                - text: "Couldn't find the dataset '${user.repoName.toLowerCase()}' in BigQuery under the Wilco project. Please create the dataset as instructed."
+                - text: "Couldn't find the dataset '${user.repoName.toLowerCase().replaceAll('-','_')}' in BigQuery under the Wilco project. Please create the dataset as instructed."
           - actionId: ready_message
             params:
               person: lucca
