@@ -56,7 +56,7 @@ startFlow:
               if __name__ == '__main__':
                   run()
               ```
-          - text: Fill in `gcs_input_path` and `bigquery_table` with your details, and ensure `fields` in `ProcessSeismicData` matches your CSV structure.
+          - text: Create a new python file and fill in `gcs_input_path` and `bigquery_table` with your details, and ensure `fields` in `ProcessSeismicData` matches your CSV structure.
           - text: "Also, in each dataset there are tables. We now want to put the records in a table called `data`."
           - text: "You might need to install some packages using `pip` like: `apache-beam`, `apache-beam[gcp]` and `google-api-python-client`."
           - text: "Once you've completed the script, let me know"

@@ -41,7 +41,6 @@ trigger:
               person: lucca
               messages:
                 - text: "The credentials you sent me look good! We are ready to move on to the next step!"
-                  delay: 1300
           - actionId: finish_step
       else:
         do:
@@ -50,4 +49,3 @@ trigger:
               person: lucca
               messages:
                 - text: "That's not correct, we received an error: `${outputs.credentials_test.error}`. Try again!"
-                  delay: 500
